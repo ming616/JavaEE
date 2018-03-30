@@ -8,4 +8,47 @@
   	<module>hero-service</module>
   	<module>hero-dao</module>
   </modules>
+  
+  <properties>
+		<java.version>1.8</java.version>
+		<spring.version>5.0.4.RELEASE</spring.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- ============== test begin ============== -->
+		<dependency><!-- JUnit单元测试框架 -->
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency><!-- spring对测试框架的简单封装功能 -->
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- ============== test end ============== -->
+	</dependencies>
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
